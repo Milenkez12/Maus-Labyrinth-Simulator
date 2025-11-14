@@ -54,7 +54,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -64,6 +64,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pekez\PycharmProjects\PythonProject\src\scripts\Labyrinth Project" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -80,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1763130281320</updated>
-      <workItem from="1763130282378" duration="3183000" />
+      <workItem from="1763130282378" duration="4479000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -98,7 +103,23 @@
       <option name="project" value="LOCAL" />
       <updated>1763131814685</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Update workspace.xml with test configuration changes&#10;&#10;Updated the `.idea/workspace.xml` file to include test-related changes. These changes modify components such as `GithubPullRequestsUISettings`, add a test task, and adjust version control settings.">
+      <option name="closed" value="true" />
+      <created>1763133652882</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1763133652882</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Update workspace.xml with test configuration changes&#10;&#10;Updated the `.idea/workspace.xml` file to include test-related changes. These changes modify components such as `GithubPullRequestsUISettings`, add a test task, and adjust version control settings.">
+      <option name="closed" value="true" />
+      <created>1763133729996</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1763133729996</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
