@@ -1,31 +1,8 @@
 class Maus:
-    __X_Cordinate: int = 0
-    __Y_Cordinate: int = 0
-    __Goalreached: bool = False
+    def __init__(self, x: int = 0, y: int = 0, goal_reached: bool = False):
+        self.x = x
+        self.y = y
+        self.goal_reached = goal_reached
 
-    # Getter und Setter für X_Cordinate
-    @property
-    def X_Cordinate(self) -> int:
-        return self.__X_Cordinate
-
-    @X_Cordinate.setter
-    def X_Cordinate(self, value: int):
-        self.__X_Cordinate = value
-
-    # Getter und Setter für Y_Cordinate
-    @property
-    def Y_Cordinate(self) -> int:
-        return self.__Y_Cordinate
-
-    @Y_Cordinate.setter
-    def Y_Cordinate(self, value: int):
-        self.__Y_Cordinate = value
-
-    # Getter und Setter für Goalreached
-    @property
-    def Goalreached(self) -> bool:
-        return self.__Goalreached
-
-    @Goalreached.setter
-    def Goalreached(self, value: bool):
-        self.__Goalreached = value
+    def __repr__(self):
+        return f"Maus(x={self.x}, y={self.y}, goal_reached={self.goal_reached})"

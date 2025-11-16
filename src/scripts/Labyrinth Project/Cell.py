@@ -1,33 +1,25 @@
 class Cell:
+    def __init__(self, x: int, y: int, goal_reached: bool = False):
+        self.x = x
+        self.y = y
+        self.goal_reached = goal_reached
 
-    __X_Cordinates: int = 0
-    __Y_Cordinates: int = 0
-    __Wall_North: bool = False
-    __Wall_South: bool = False
-    __Wall_East: bool = False
-    __Wall_West: bool = False
+        # Walls
+        self.wall_north = False
+        self.wall_south = False
+        self.wall_east = False
+        self.wall_west = False
 
-    @property
-    def X_Cordinates(self) -> int:
-        return self.__X_Cordinates
+        # Neighbours list (like ArrayList in Java)
+        self.neighbours = []
 
-    @X_Cordinates.setter
-    def X_Cordinates(self, value: int):
-        self.__X_Cordinates = value
+    # Methods to manage neighbours
+    def add_neighbour(self, neighbour):
+        self.neighbours.append(neighbour)
 
-    # Getter und Setter für Y_Cordinates
-    @property
-    def Y_Cordinates(self) -> int:
-        return self.__Y_Cordinates
+    def remove_neighbour(self, neighbour):
+        if neighbour in self.neighbours:
+            self.neighbours.remove(neighbour)
 
-    @Y_Cordinates.setter
-    def Y_Cordinates(self, value: int):
-        self.__Y_Cordinates = value
-
-    @property
-    def Wall_North(self) -> bool:
-        return self.__Wall_North
-
-    @Wall_North.setter
-    def Wall_North(self, value: bool):
-        self.__Wall_North = value
+    def __repr__(self):
+        return f"Cell({self.x}, {self.y})"
