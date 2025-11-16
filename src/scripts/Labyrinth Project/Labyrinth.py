@@ -46,11 +46,10 @@ class Labyrinth:
         self.start.visited = True
 
         while stack:
-            cell = stack[-1]  # Peek at the top of the stack
+            cell = stack[-1]
             unvisited_neighbours = [n for n in cell.neighbours if not n.visited]
 
             if unvisited_neighbours:
-                # Pick a random neighbor
                 next_cell = random.choice(unvisited_neighbours)
                 next_cell.visited = True
 
@@ -73,31 +72,48 @@ class Labyrinth:
                 stack.append(next_cell)
                 path.append(next_cell)
             else:
-                stack.pop()  # Backtrack
+                stack.pop()
+
+        # ✅ Open start and end
+        self.start.wall_north = False
+        self.end.wall_south = False
 
         return path
 
     def generate_ascii_maze(self):
         maze_representation = []
 
-        # Top border
-        maze_representation.append("+" + "---+" * self.length)
+        # Top border: leave gap if start is open
+        top_border = "+"
+        for x in range(self.length):
+            if self.labyrinth[0][x] == self.start and not self.start.wall_north:
+                top_border += "   +"  # open entry
+            else:
+                top_border += "---+"
+        maze_representation.append(top_border)
 
         for y in range(self.height):
-            # Row for cells and vertical walls
             row_cells = "|"
             row_walls = "+"
             for x in range(self.length):
                 cell = self.labyrinth[y][x]
 
-                # Cell space
-                row_cells += "   "
+                # Add S or E markers
+                if cell == self.start:
+                    row_cells += " S "
+                elif cell == self.end:
+                    row_cells += " E "
+                else:
+                    row_cells += "   "
 
                 # Right wall
                 row_cells += "|" if cell.wall_east else " "
 
                 # Bottom wall
-                row_walls += "---+" if cell.wall_south else "   +"
+                if cell == self.end and not self.end.wall_south:
+                    row_walls += "   +"  # open exit
+                else:
+                    row_walls += "---+" if cell.wall_south else "   +"
 
             maze_representation.append(row_cells)
             maze_representation.append(row_walls)
