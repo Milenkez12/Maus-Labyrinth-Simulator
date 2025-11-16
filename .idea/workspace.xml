@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe9ee201-4bea-46d8-8680-4cc4134e393b" name="Changes" comment="Update workspace.xml with test configuration changes&#10;&#10;Updated the `.idea/workspace.xml` file to include test-related changes. These changes modify components such as `GithubPullRequestsUISettings`, add a test task, and adjust version control settings." />
+    <list default="true" id="fe9ee201-4bea-46d8-8680-4cc4134e393b" name="Changes" comment="Commit 1:&#10;feat: add Pythonic Cell class with neighbours and wall attributes&#10;Commit 2:&#10;feat: add Maus class with simple constructor and __repr__&#10;Commit 3:&#10;feat: implement Labyrinth class with grid initialization and neighbour assignment&#10;Commit 4:&#10;todo: prepare random_maze_generator method for DFS algorithm">
+      <change afterPath="$PROJECT_DIR$/src/scripts/Labyrinth Project/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Labyrinth Project/Cell.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/Labyrinth Project/Cell.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Labyrinth Project/Labyrinth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/Labyrinth Project/Labyrinth.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" show_ignored="true">
+  <component name="ChangesViewManager">
     <option name="groupingKeys">
       <option value="directory" />
     </option>
@@ -24,6 +29,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -49,19 +55,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Mappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests in test.py.executor": "Run",
+    "Python.Labyrinth.executor": "Run",
+    "Python.test.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\pekez\PycharmProjects\PythonProject\src\scripts\Labyrinth Project" />
@@ -83,7 +93,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1763130281320</updated>
-      <workItem from="1763130282378" duration="4793000" />
+      <workItem from="1763130282378" duration="8648000" />
+      <workItem from="1763293672698" duration="1228000" />
+      <workItem from="1763295266834" duration="7846000" />
+      <workItem from="1763305231107" duration="3047000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -117,16 +130,79 @@
       <option name="project" value="LOCAL" />
       <updated>1763133729996</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Update workspace.xml with test configuration changes&#10;&#10;Updated the `.idea/workspace.xml` file to include test-related changes. These changes modify components such as `GithubPullRequestsUISettings`, add a test task, and adjust version control settings.">
+      <option name="closed" value="true" />
+      <created>1763135234661</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1763135234661</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add Dijkstra algorithm and base Algorithm interface&#10;&#10;Implement the abstract base class &quot;Algorithms&quot; to define a common interface for pathfinding algorithms. Introduce &quot;DijkstraAlgorithm&quot; as a specific implementation, printing the start and end coordinates for debugging.">
+      <option name="closed" value="true" />
+      <created>1763137592150</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1763137592150</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Commit 1:&#10;feat: add Pythonic Cell class with neighbours and wall attributes&#10;Commit 2:&#10;feat: add Maus class with simple constructor and __repr__&#10;Commit 3:&#10;feat: implement Labyrinth class with grid initialization and neighbour assignment&#10;Commit 4:&#10;todo: prepare random_maze_generator method for DFS algorithm">
+      <option name="closed" value="true" />
+      <created>1763300665614</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1763300665614</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Erster Git versuch" />
     <MESSAGE value="test" />
     <MESSAGE value="Update workspace.xml with test configuration changes&#10;&#10;Updated the `.idea/workspace.xml` file to include test-related changes. These changes modify components such as `GithubPullRequestsUISettings`, add a test task, and adjust version control settings." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update workspace.xml with test configuration changes&#10;&#10;Updated the `.idea/workspace.xml` file to include test-related changes. These changes modify components such as `GithubPullRequestsUISettings`, add a test task, and adjust version control settings." />
+    <MESSAGE value="Add Dijkstra algorithm and base Algorithm interface&#10;&#10;Implement the abstract base class &quot;Algorithms&quot; to define a common interface for pathfinding algorithms. Introduce &quot;DijkstraAlgorithm&quot; as a specific implementation, printing the start and end coordinates for debugging." />
+    <MESSAGE value="Commit 1:&#10;feat: add Pythonic Cell class with neighbours and wall attributes&#10;Commit 2:&#10;feat: add Maus class with simple constructor and __repr__&#10;Commit 3:&#10;feat: implement Labyrinth class with grid initialization and neighbour assignment&#10;Commit 4:&#10;todo: prepare random_maze_generator method for DFS algorithm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 1:&#10;feat: add Pythonic Cell class with neighbours and wall attributes&#10;Commit 2:&#10;feat: add Maus class with simple constructor and __repr__&#10;Commit 3:&#10;feat: implement Labyrinth class with grid initialization and neighbour assignment&#10;Commit 4:&#10;todo: prepare random_maze_generator method for DFS algorithm" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/scripts/Labyrinth Project/Labyrinth.py</url>
+          <line>4</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/scripts/Labyrinth Project/test.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/scripts/Labyrinth Project/test.py</url>
+          <line>4</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/PythonProject$test.coverage" NAME="test Coverage Results" MODIFIED="1763329083035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/scripts/Labyrinth Project" />
+    <SUITE FILE_PATH="coverage/PythonProject$Labyrinth.coverage" NAME="Labyrinth Coverage Results" MODIFIED="1763328897382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/scripts/Labyrinth Project" />
+    <SUITE FILE_PATH="coverage/PythonProject$.coverage" NAME=" Coverage Results" MODIFIED="1763328327414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/scripts/Labyrinth Project" />
   </component>
 </project>
