@@ -2,7 +2,7 @@ import random
 from Cell import Cell
 
 
-class Labyrinth:
+class Perfect_Maze:
     def __init__(self, height: int, length: int, difficulty_rating: int = 0):
         self.height = height
         self.length = length
@@ -18,12 +18,14 @@ class Labyrinth:
 
     def which_maze(self,int = 0):
         if int == 0:
-            self.simply_connected_maze()
+            self.perfect_maze_generation()
         elif int == 1:
             self.generate_ascii_maze()
         else:
             print("Invalid input")
 
+    def imperfect_maze_generation(self):
+        self.assign_neighbours()
 
 
     def assign_neighbours(self):
@@ -50,7 +52,7 @@ class Labyrinth:
     def set_end(self, cell: Cell):
         self.end = cell
 
-    def simply_connected_maze(self):
+    def perfect_maze_generation(self):
         self.assign_neighbours()
         stack = [self.start]
         path = []
@@ -88,8 +90,38 @@ class Labyrinth:
         # ✅ Open start and end
         self.start.wall_north = False
         self.end.wall_south = False
+        self.neighbour_removal()
 
         return path
+
+    def neighbour_removal(self):
+        for y in range(self.height):
+            for x in range(self.length):
+                cell = self.labyrinth[y][x]
+
+                # Check North
+                if y > 0:
+                    north = self.labyrinth[y - 1][x]
+                    if cell.wall_north or north.wall_south:
+                        cell.remove_neighbour(north)
+
+                # Check South
+                if y < self.height - 1:
+                    south = self.labyrinth[y + 1][x]
+                    if cell.wall_south or south.wall_north:
+                        cell.remove_neighbour(south)
+
+                # Check West
+                if x > 0:
+                    west = self.labyrinth[y][x - 1]
+                    if cell.wall_west or west.wall_east:
+                        cell.remove_neighbour(west)
+
+                # Check East
+                if x < self.length - 1:
+                    east = self.labyrinth[y][x + 1]
+                    if cell.wall_east or east.wall_west:
+                        cell.remove_neighbour(east)
 
     def generate_ascii_maze(self):
         maze_representation = []
