@@ -13,8 +13,18 @@ class Labyrinth:
             [Cell(x, y) for x in range(length)] for y in range(height)
         ]
 
-        self.start: Cell = None
-        self.end: Cell = None
+        self.start: Cell = self.labyrinth[0][0]
+        self.end: Cell = self.labyrinth[length-1][height - 1]
+
+    def which_maze(self,int = 0):
+        if int == 0:
+            self.simply_connected_maze()
+        elif int == 1:
+            self.generate_ascii_maze()
+        else:
+            print("Invalid input")
+
+
 
     def assign_neighbours(self):
         for y in range(self.height):
@@ -40,7 +50,8 @@ class Labyrinth:
     def set_end(self, cell: Cell):
         self.end = cell
 
-    def random_maze_generator(self):
+    def simply_connected_maze(self):
+        self.assign_neighbours()
         stack = [self.start]
         path = []
         self.start.visited = True

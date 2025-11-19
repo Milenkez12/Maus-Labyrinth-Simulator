@@ -5,10 +5,9 @@ from Cell import Cell
 class Test:
     def test(self):
         labyrinth = Labyrinth(6, 6)
-        labyrinth.assign_neighbours()
-        labyrinth.set_start(labyrinth.labyrinth[0][0])
+        labyrinth.set_start(labyrinth.labyrinth[0][3])
         labyrinth.set_end(labyrinth.labyrinth[5][5])
-        labyrinth.random_maze_generator()
+        labyrinth.simply_connected_maze()
 
         # Print the ASCII maze
         print(labyrinth.generate_ascii_maze())

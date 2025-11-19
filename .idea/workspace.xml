@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe9ee201-4bea-46d8-8680-4cc4134e393b" name="Changes" comment="feat: implement maze generation and ASCII rendering&#10;&#10;Added a depth-first search-based maze generation in `Labyrinth.py`. Introduced ASCII rendering to visualize the maze structure. Updated `Cell.py` to include walls and visited tracking for maze generation, and created a basic test setup in `test.py`.">
+    <list default="true" id="fe9ee201-4bea-46d8-8680-4cc4134e393b" name="Changes" comment="feat: enhance maze generation and add ASCII visualization&#10;&#10;Implemented depth-first search-based maze generation in `Labyrinth.py`, including start and end openings in the maze. Added ASCII rendering to display the maze layout, including &quot;S&quot; and &quot;E&quot; markers for start and end. Updated test configuration to verify maze generation and rendering functionality.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/Labyrinth Project/Labyrinth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/Labyrinth Project/Labyrinth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Labyrinth Project/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/Labyrinth Project/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,23 +54,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests in test.py.executor": "Run",
-    "Python.Labyrinth.executor": "Run",
-    "Python.test.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests in test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Cell.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Labyrinth.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Mappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\pekez\PycharmProjects\PythonProject\src\scripts\Labyrinth Project" />
@@ -93,7 +96,13 @@
       <workItem from="1763130282378" duration="8648000" />
       <workItem from="1763293672698" duration="1228000" />
       <workItem from="1763295266834" duration="7846000" />
-      <workItem from="1763305231107" duration="3405000" />
+      <workItem from="1763305231107" duration="4092000" />
+      <workItem from="1763383562223" duration="2990000" />
+      <workItem from="1763400966171" duration="25000" />
+      <workItem from="1763404085403" duration="113000" />
+      <workItem from="1763455996277" duration="257000" />
+      <workItem from="1763491637885" duration="1801000" />
+      <workItem from="1763536195120" duration="1624000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -159,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763329116280</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: enhance maze generation and add ASCII visualization&#10;&#10;Implemented depth-first search-based maze generation in `Labyrinth.py`, including start and end openings in the maze. Added ASCII rendering to display the maze layout, including &quot;S&quot; and &quot;E&quot; markers for start and end. Updated test configuration to verify maze generation and rendering functionality.">
+      <option name="closed" value="true" />
+      <created>1763329843760</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1763329843760</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,14 +200,15 @@
     <MESSAGE value="Add Dijkstra algorithm and base Algorithm interface&#10;&#10;Implement the abstract base class &quot;Algorithms&quot; to define a common interface for pathfinding algorithms. Introduce &quot;DijkstraAlgorithm&quot; as a specific implementation, printing the start and end coordinates for debugging." />
     <MESSAGE value="Commit 1:&#10;feat: add Pythonic Cell class with neighbours and wall attributes&#10;Commit 2:&#10;feat: add Maus class with simple constructor and __repr__&#10;Commit 3:&#10;feat: implement Labyrinth class with grid initialization and neighbour assignment&#10;Commit 4:&#10;todo: prepare random_maze_generator method for DFS algorithm" />
     <MESSAGE value="feat: implement maze generation and ASCII rendering&#10;&#10;Added a depth-first search-based maze generation in `Labyrinth.py`. Introduced ASCII rendering to visualize the maze structure. Updated `Cell.py` to include walls and visited tracking for maze generation, and created a basic test setup in `test.py`." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: implement maze generation and ASCII rendering&#10;&#10;Added a depth-first search-based maze generation in `Labyrinth.py`. Introduced ASCII rendering to visualize the maze structure. Updated `Cell.py` to include walls and visited tracking for maze generation, and created a basic test setup in `test.py`." />
+    <MESSAGE value="feat: enhance maze generation and add ASCII visualization&#10;&#10;Implemented depth-first search-based maze generation in `Labyrinth.py`, including start and end openings in the maze. Added ASCII rendering to display the maze layout, including &quot;S&quot; and &quot;E&quot; markers for start and end. Updated test configuration to verify maze generation and rendering functionality." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: enhance maze generation and add ASCII visualization&#10;&#10;Implemented depth-first search-based maze generation in `Labyrinth.py`, including start and end openings in the maze. Added ASCII rendering to display the maze layout, including &quot;S&quot; and &quot;E&quot; markers for start and end. Updated test configuration to verify maze generation and rendering functionality." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/scripts/Labyrinth Project/test.py</url>
-          <line>13</line>
+          <line>12</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -202,8 +220,9 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PythonProject$test.coverage" NAME="test Coverage Results" MODIFIED="1763329433803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/scripts/Labyrinth Project" />
-    <SUITE FILE_PATH="coverage/PythonProject$Labyrinth.coverage" NAME="Labyrinth Coverage Results" MODIFIED="1763329380505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/scripts/Labyrinth Project" />
+    <SUITE FILE_PATH="coverage/PythonProject$test.coverage" NAME="test Coverage Results" MODIFIED="1763536988069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/scripts/Labyrinth Project" />
+    <SUITE FILE_PATH="coverage/PythonProject$Labyrinth.coverage" NAME="Labyrinth Coverage Results" MODIFIED="1763329703156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/scripts/Labyrinth Project" />
+    <SUITE FILE_PATH="coverage/PythonProject$Cell.coverage" NAME="Cell Coverage Results" MODIFIED="1763383998369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/scripts/Labyrinth Project" />
     <SUITE FILE_PATH="coverage/PythonProject$.coverage" NAME=" Coverage Results" MODIFIED="1763328327414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/scripts/Labyrinth Project" />
   </component>
 </project>
